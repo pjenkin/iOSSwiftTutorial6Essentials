@@ -11,8 +11,18 @@ import UIKit
 class SecondViewController: UIViewController {
     @IBOutlet weak var secondLabel: UILabel!
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var userName = ""   // user-entered data from first ViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+        nameLabel.text = "Your name is: \(userName)"
+        print(userName + "...")
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -33,4 +43,8 @@ class SecondViewController: UIViewController {
     }
     */
 
+    @IBAction func backBtnClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        // return to first vew
+    }
 }

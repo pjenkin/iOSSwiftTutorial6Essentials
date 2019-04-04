@@ -61,6 +61,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameText" destination="cpP-tG-FJg" id="Ksm-dx-zAf"/>
                         <segue destination="P0s-xQ-Gji" kind="show" id="PLL-IX-RsU"/>
                     </connections>
                 </viewController>
@@ -86,14 +87,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name is: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqG-yr-nIa">
+                                <rect key="frame" x="60" y="134" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvW-00-eS4">
+                                <rect key="frame" x="60" y="200" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnClicked:" destination="P0s-xQ-Gji" eventType="touchUpInside" id="yaw-eG-2xt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1JA-OD-KWh" firstAttribute="centerX" secondItem="qDj-jq-Lk3" secondAttribute="centerX" id="2pC-lh-lh1"/>
                             <constraint firstItem="1JA-OD-KWh" firstAttribute="top" secondItem="gFI-r5-quS" secondAttribute="bottom" constant="50" id="BNQ-kP-hU6"/>
+                            <constraint firstItem="RqG-yr-nIa" firstAttribute="leading" secondItem="1JA-OD-KWh" secondAttribute="leading" id="RGS-cU-S62"/>
+                            <constraint firstItem="RqG-yr-nIa" firstAttribute="top" secondItem="1JA-OD-KWh" secondAttribute="bottom" constant="43" id="sOu-YV-YrT"/>
                             <constraint firstItem="1JA-OD-KWh" firstAttribute="centerX" secondItem="qDj-jq-Lk3" secondAttribute="centerX" id="xol-SX-ADN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameLabel" destination="RqG-yr-nIa" id="ZLA-Gk-v3b"/>
                         <outlet property="secondLabel" destination="1JA-OD-KWh" id="gFX-91-Rua"/>
                     </connections>
                 </viewController>
