@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // execute segue previously defined on storyboard
+    @IBAction func saveBtnClicked(_ sender: Any) {
+        performSegue(withIdentifier: "fromFirstToSecond", sender: nil)
+    }
 
 }
 

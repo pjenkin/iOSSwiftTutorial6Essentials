@@ -27,25 +27,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-pa-5jG">
-                                <rect key="frame" x="89" y="184" width="143" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-pa-5jG">
+                                <rect key="frame" x="124" y="237" width="127" height="30"/>
                                 <state key="normal" title="Go to second view"/>
                                 <connections>
-                                    <segue destination="P0s-xQ-Gji" kind="show" id="tRh-ar-kbU"/>
+                                    <segue destination="P0s-xQ-Gji" kind="show" identifier="fromFirstToSecond" id="tRh-ar-kbU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZH-pF-MBl">
+                                <rect key="frame" x="171" y="169" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ye-jw-Pyk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Please enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpP-tG-FJg">
+                                <rect key="frame" x="101" y="121" width="173" height="22"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cpP-tG-FJg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4lY-TU-bjr"/>
+                            <constraint firstItem="cpP-tG-FJg" firstAttribute="top" secondItem="5Nw-7B-ieS" secondAttribute="bottom" constant="30" id="82I-3T-gsK"/>
+                            <constraint firstItem="ROe-pa-5jG" firstAttribute="top" secondItem="2ZH-pF-MBl" secondAttribute="bottom" constant="38" id="FHv-Ts-imS"/>
+                            <constraint firstItem="2ZH-pF-MBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTk-Lp-tB0"/>
+                            <constraint firstItem="2ZH-pF-MBl" firstAttribute="top" secondItem="cpP-tG-FJg" secondAttribute="bottom" constant="26" id="Lua-ZY-J4Q"/>
                             <constraint firstItem="5Nw-7B-ieS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Rsh-vj-ZIR"/>
+                            <constraint firstItem="ROe-pa-5jG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kb2-38-jds"/>
                             <constraint firstItem="5Nw-7B-ieS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhY-l1-p9O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="P0s-xQ-Gji" kind="show" id="PLL-IX-RsU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-73" y="36"/>
+            <point key="canvasLocation" x="-72.799999999999997" y="36.431784107946029"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="uO4-8w-0yV">
@@ -81,4 +102,7 @@
             <point key="canvasLocation" x="653.60000000000002" y="36.431784107946029"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tRh-ar-kbU"/>
+    </inferredMetricsTieBreakers>
 </document>
