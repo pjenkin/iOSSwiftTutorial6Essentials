@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="17D47" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Working_with_Images" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hendrix.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="5Fa-b7-oyJ">
+                                <rect key="frame" x="50" y="175" width="240" height="250"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PJd-Jh-K8o">
+                                <rect key="frame" x="124" y="463" width="128" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hx-Qa-amh">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="jgD-Pt-Ida"/>
+                                        </constraints>
+                                        <state key="normal" title="Change the Pic"/>
+                                        <connections>
+                                            <action selector="changeBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lGP-Qi-ytC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Fa-b7-oyJ" secondAttribute="bottom" constant="242" id="BY6-xc-sXK"/>
+                            <constraint firstItem="PJd-Jh-K8o" firstAttribute="top" secondItem="5Fa-b7-oyJ" secondAttribute="bottom" constant="38" id="HXl-Eq-KT4"/>
+                            <constraint firstItem="PJd-Jh-K8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O2a-wh-HjQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Fa-b7-oyJ" secondAttribute="trailing" constant="69" id="OxM-Mw-f0L"/>
+                            <constraint firstItem="5Fa-b7-oyJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="155" id="tR2-J0-LW8"/>
+                            <constraint firstItem="5Fa-b7-oyJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="yy3-FL-GZ9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="8bC-Xf-vdC" id="2PT-1S-abT"/>
+                        <outlet property="imageViewActual" destination="5Fa-b7-oyJ" id="aEs-QJ-gMU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hendrix.jpeg" width="290" height="174"/>
+    </resources>
+</document>
